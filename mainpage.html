@@ -1,0 +1,38 @@
+<html>
+	<head>
+ 		<title>Changing box color by clicking</title>
+ 		<style type="text/css">
+ 		#main{
+ 			position: absolute;
+			left: 52px;
+			top: 4px;
+			width: 1066px;
+			height: 610px;
+ 		}
+ 		#firstpage{
+ 			position: absolute;
+			left: 52px;
+			top: 4px;
+			width: 1066px;
+			height: 610px;
+ 		}
+ 		</style>
+		<script type="text/javascript">
+		var isOff = true;
+		function clickBox()
+			{
+ 			isOff = !isOff;
+ 			boxObj = document.getElementById("firstpage");
+ 			if (isOff)
+ 			boxObj.setAttribute("src","img/3STOR.jpg");
+ 			else
+ 			boxObj.setAttribute("src","img/aesops.jpg");
+			}
+		</script>
+	</head>
+	<body>
+ 		<div id="main">
+		<img id="firstpage" onclick="clickBox()" src="img/aesops fables.jpg"/>
+		</div>
+	</body>
+</html>
